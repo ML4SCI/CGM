@@ -1,6 +1,8 @@
 # Dimensionality Reduction for Studying Diffuse Circumgalactic Medium
 
-This repository contains code for the above-mentioned GSOC project. All input data and outputs can be found here: https://drive.google.com/drive/folders/1qyZcVPA2E1cGRBT2Kt-Lrmj7t7QddfuI?usp=sharing (stored on Google Drive due to size limits).
+This repository contains code for the above-mentioned GSOC project. All input data and outputs (as well as the code) can be found here: https://drive.google.com/drive/folders/1qyZcVPA2E1cGRBT2Kt-Lrmj7t7QddfuI?usp=sharing (stored on Google Drive due to size limits).
+
+The project is described in more detail in the following blog post: ADD LINK HERE
 
 The statistical analysis was done on two different datasets: "preliminary" and "updated" dataset. The code for each is contained in the relevant sub-folder of /code folder. The code is non-overlapping, that is, when a certain method was tuned/fitted to both datasets, the code is included only in the "/code/updated_data" folder as we are ultimately interested in analysing this dataset.
 
