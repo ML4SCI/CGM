@@ -38,7 +38,7 @@ The structure of the two folders and content of the individual notebooks and .py
 
 In general, all .py files contain functions that are then used inside the notebooks.
 
-# "/code/prelim_data":
+## "/code/prelim_data":
 
 **.py files:**
   - data_load.py: contains functions to load data. Given a list of directories, all "hdf5" files are loaded, split into spectral and physical data and concatenated to from a dataset of physical features and a dataset of spectral features.
@@ -59,7 +59,7 @@ In general, all .py files contain functions that are then used inside the notebo
 - "analysis_pca_ae_errors.ipynb": As AE and (trimmed) PCA seem to be most promising in terms of reconstruction loss, their reconstruction errors are studied more extensively here. Specifically, this notebook looks at scaling of error with volatility of spectrum, potential relations to physical variables.
 
 
-# "/code/updated_data":
+## "/code/updated_data":
 
 **.py files:**
   - data_load_new.py: Contains functions to load data. Given a list of directories, all "hdf5" files are loaded and concatenated to from physical and spectral datasets dataset. It differs from "data_load" function described above in how the split into physical and spectral data is done (as the input data have different structures).
