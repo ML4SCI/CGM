@@ -26,7 +26,7 @@ Next, we compare Autoencoder to Variational Autoencoder and as the figure below 
 
 Below are scatter plots of the four latent features. As the plot shows, the latent space has meanigful physical interpretation, for example, the spectra with zero impact parameter are clearly separated from those with non-zero impact parameter.
 
-![image](https://user-images.githubusercontent.com/71390120/131005490-6f33a7db-7ab7-450c-a3db-c2952ae08808.png)
+![image](https://user-images.githubusercontent.com/71390120/131009826-c782726e-5980-4695-8f56-9d13ee853642.png)
 
 
 
