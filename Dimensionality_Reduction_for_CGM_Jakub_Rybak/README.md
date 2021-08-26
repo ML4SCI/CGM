@@ -18,7 +18,7 @@ Different dimensionality reduction methods result in different latent space. We 
 Below is a comparison of PCA, sparse PCA and Autoencoder in terms of reconstruction error for different latent space sizes. We see that autoencoder achieves low reconstruction error for a small latent space, and therefore is our preferred method.
 ![image](https://user-images.githubusercontent.com/71390120/131005807-9511753b-6671-470f-95df-f8adbda4c55c.png)
 
-Next, we compare Autoencoder to Variational Autoencoder and as the figure below shows, the two models have almost identical performance. Also, latent space dimension of four seem to be sufficient to capture the input data well.
+Next, we compare Autoencoder to Variational Autoencoder and as the figure below shows, the two models have almost identical performance. Also, latent space dimension of four seems to be sufficient to capture the input data well.
 
 ![image](https://user-images.githubusercontent.com/71390120/131004873-82f0b157-d92f-4e90-ba9a-1421d2fa5805.png)
 
