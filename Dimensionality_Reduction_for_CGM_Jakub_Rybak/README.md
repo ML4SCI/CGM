@@ -9,7 +9,7 @@ The project is described in more detail in the following blog post: https://medi
 ## Objective
 CGM is a gas halo surrounding a galaxy, which contains information on galaxy evolution and history. When a light from a bright source (such as quasar) passes through the gas, part of it gets absorbe, resulting in absorption lines in the spectrum of light intensity, as the figure below shows. It is plausible that there are a few unobserved physical properties of the CGM that determine how the spectrum looks like. This motivates the search for a lower-dimensional latent space. We use a variety of dimensionality-reduction methods to achieve this.
 
-![image]{width: 70%}(https://user-images.githubusercontent.com/71390120/131004001-9958b083-11c0-4a62-aedf-073a7b629ad1.png)
+![image](https://user-images.githubusercontent.com/71390120/131004001-9958b083-11c0-4a62-aedf-073a7b629ad1.png)
 
 ## How to choose a latent space
 
