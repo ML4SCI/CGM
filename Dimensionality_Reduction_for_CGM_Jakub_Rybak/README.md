@@ -4,13 +4,41 @@ This repository contains code for the above-mentioned GSOC project. All input da
 
 The project is described in more detail in the following blog post: https://medium.com/@jbrybak/dimensionality-reduction-for-galaxy-evolution-82235391dcd3
 
+# Project description
+
+## Objective
+CGM is a gas halo surrounding a galaxy, which contains information on galaxy evolution and history. When a light from a bright source (such as quasar) passes through the gas, part of the light is absorbed, resulting in absorption lines in the spectrum of light intensity (i.e. low light intensity for certain wavelengths), as the figure below shows. It is plausible that there are a few unobserved physical properties of the CGM that determine how the spectrum looks like. This motivates the search for a lower-dimensional latent space. We explore a variety of dimensionality-reduction methods to estimate this latent space.
+
+![image](https://user-images.githubusercontent.com/71390120/131004001-9958b083-11c0-4a62-aedf-073a7b629ad1.png)
+
+## How to choose a latent space
+
+Different dimensionality reduction methods result in different latent space. We judge how "good" a given latent space is by how well we can reconstruct the original spectrum. Specifically, we seek to minimise the mean squared reconstruction error.
+
+Below is a comparison of PCA, sparse PCA and Autoencoder in terms of reconstruction error for different latent space sizes. We see that autoencoder achieves low reconstruction error for a small latent space, and therefore is our preferred method.
+![image](https://user-images.githubusercontent.com/71390120/131005807-9511753b-6671-470f-95df-f8adbda4c55c.png)
+
+Next, we compare Autoencoder to Variational Autoencoder and as the figure below shows, the two models have almost identical performance. Also, latent space dimension of four seems to be sufficient to capture the input data well.
+
+![image](https://user-images.githubusercontent.com/71390120/131004873-82f0b157-d92f-4e90-ba9a-1421d2fa5805.png)
+
+## Latent space visualisation
+
+Below are scatter plots of the four latent features. As the plot shows, the latent space has meanigful physical interpretation, for example, the spectra with zero impact parameter are clearly separated from those with non-zero impact parameter.
+
+![image](https://user-images.githubusercontent.com/71390120/131009826-c782726e-5980-4695-8f56-9d13ee853642.png)
+
+
+
+# Code
+
 The statistical analysis was done on two different datasets: "preliminary" and "updated" dataset. The code for each is contained in the relevant sub-folder of /code folder. The code is non-overlapping, that is, when a certain method was tuned/fitted to both datasets, the code is included only in the "/code/updated_data" folder as we are ultimately interested in analysing this dataset.
 
 The structure of the two folders and content of the individual notebooks and .py files is described below.
 
 In general, all .py files contain functions that are then used inside the notebooks.
 
-# "/code/prelim_data":
+## "/code/prelim_data":
 
 **.py files:**
   - data_load.py: contains functions to load data. Given a list of directories, all "hdf5" files are loaded, split into spectral and physical data and concatenated to from a dataset of physical features and a dataset of spectral features.
@@ -31,7 +59,7 @@ In general, all .py files contain functions that are then used inside the notebo
 - "analysis_pca_ae_errors.ipynb": As AE and (trimmed) PCA seem to be most promising in terms of reconstruction loss, their reconstruction errors are studied more extensively here. Specifically, this notebook looks at scaling of error with volatility of spectrum, potential relations to physical variables.
 
 
-# "/code/updated_data":
+## "/code/updated_data":
 
 **.py files:**
   - data_load_new.py: Contains functions to load data. Given a list of directories, all "hdf5" files are loaded and concatenated to from physical and spectral datasets dataset. It differs from "data_load" function described above in how the split into physical and spectral data is done (as the input data have different structures).
