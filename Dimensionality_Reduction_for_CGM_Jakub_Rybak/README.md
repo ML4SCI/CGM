@@ -9,14 +9,14 @@ The project is described in more detail in the following blog post: https://medi
 ## Objective
 CGM is a gas halo surrounding a galaxy, which contains information on galaxy evolution and history. When a light from a bright source (such as quasar) passes through the gas, part of it gets absorbe, resulting in absorption lines in the spectrum of light intensity, as the figure below shows. It is plausible that there are a few unobserved physical properties of the CGM that determine how the spectrum looks like. This motivates the search for a lower-dimensional latent space. We use a variety of dimensionality-reduction methods to achieve this.
 
-![image](https://user-images.githubusercontent.com/71390120/131004001-9958b083-11c0-4a62-aedf-073a7b629ad1.png)
+![image] {width: 70%}(https://user-images.githubusercontent.com/71390120/131004001-9958b083-11c0-4a62-aedf-073a7b629ad1.png)
 
 ## How to choose a latent space
 
 Different dimensionality reduction methods result in different latent space. We judge how "good" a given latent space is by how well we can reconstruct the original spectrum. Specifically, we seek to minimise the mean squared reconstruction error.
 
 Below is a comparison of PCA, sparse PCA and Autoencoder in terms of reconstruction error for different latent space sizes. We see that autoencoder achieves low reconstruction error for a small latent space, and therefore is our preferred method.
-![image](https://user-images.githubusercontent.com/71390120/131004284-021c41a1-e859-4719-bfd7-f803cd835182.png)
+![image](https://user-images.githubusercontent.com/71390120/131005807-9511753b-6671-470f-95df-f8adbda4c55c.png)
 
 Next, we compare Autoencoder to Variational Autoencoder and as the figure below shows, the two models have almost identical performance. Also, latent space dimension of four seem to be sufficient to capture the input data well.
 
